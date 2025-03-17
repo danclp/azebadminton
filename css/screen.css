@@ -684,6 +684,30 @@ body:before {
   width: auto;
 }
 
+/* This block of CSS adds opacity transition to background */
+.mfp-with-fade .mfp-container,
+.mfp-with-fade.mfp-bg {
+  opacity: 0;
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.mfp-with-fade.mfp-ready .mfp-container {
+  opacity: 1;
+}
+
+.mfp-with-fade.mfp-ready.mfp-bg {
+  opacity: 0.8;
+}
+
+.mfp-with-fade.mfp-removing .mfp-container,
+.mfp-with-fade.mfp-removing.mfp-bg {
+  opacity: 0;
+}
+
 section {
   padding: 60px 0;
 }
@@ -1734,7 +1758,7 @@ section {
   -o-transition: all 0.35s ease-in-out;
   transition: all 0.35s ease-in-out;
   color: #FFF;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 300;
 }
 #coaches .coaches-list .list-container .container-item .item-briefing .briefing-items .details a:before {
