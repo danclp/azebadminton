@@ -823,11 +823,11 @@ section {
   flex-basis: 100%;
   padding: 0;
   text-align: center;
-  height: 0;
+  max-height: 0;
   overflow: hidden;
 }
 .nav-island .site-nav.active {
-  height: 100vh;
+  max-height: 100vh;
   margin-top: 30px;
 }
 .nav-island .site-nav li a {
@@ -868,7 +868,7 @@ section {
   }
   .nav-island .site-nav {
     flex-basis: auto;
-    height: auto;
+    max-height: none;
   }
   .nav-island .site-nav li {
     float: left;
@@ -1031,7 +1031,8 @@ section {
 }
 .home .hero-promote_content {
   overflow: hidden;
-  padding-top: 47.8125%;
+  margin-top: 80px;
+  padding-top: 56.25%;
   position: relative;
 }
 .home .hero-promote_content img {
@@ -1105,6 +1106,10 @@ section {
   margin-top: 20px;
 }
 @media screen and (min-width: 1024px) {
+  .home .hero-promote_content {
+    margin-top: 0;
+    padding-top: 47.8125%;
+  }
   .home .hero-promote_info {
     -webkit-transform: translate(0, -50%);
     -moz-transform: translate(0, -50%);
