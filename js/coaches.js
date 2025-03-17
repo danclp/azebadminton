@@ -1,3 +1,9 @@
+// Mobile Nav .site-nav is the trigger
+$('.toggle').click(function() {
+  $('this').toggleClass('active');
+  $('.site-nav').toggleClass('active');
+});
+
 // Coaches Filter
 $('.cfilter').on('click', function() {
   var $location = $(this).attr('data-location');
