@@ -2213,17 +2213,15 @@ section {
   margin-top: 30px;
 }
 #programmes .programmes-schedules .schedule-list {
+  border-top: 1px solid rgb(127.5, 127.5, 127.5);
   margin-top: 20px;
 }
 #programmes .programmes-schedules .schedule-list article {
   cursor: pointer;
 }
 #programmes .programmes-schedules .schedule-list .place {
-  border-top: 1px solid rgb(127.5, 127.5, 127.5);
-  padding: 15px 0 0;
-}
-#programmes .programmes-schedules .schedule-list .place:last-child {
   border-bottom: 1px solid rgb(127.5, 127.5, 127.5);
+  padding: 15px 0 0;
 }
 #programmes .programmes-schedules .schedule-list .place.open h4:after {
   content: "-";
