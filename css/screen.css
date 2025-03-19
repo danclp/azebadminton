@@ -1151,7 +1151,6 @@ section {
   width: 80px;
 }
 .home .statistic-info span {
-  display: block;
   text-align: center;
 }
 .home .statistic-info cite {
@@ -1173,24 +1172,26 @@ section {
     font-size: 18px;
   }
 }
-.home .statistic-number {
+.home .statistic-plus {
+  display: block;
   font-weight: 800;
   line-height: 1.25;
 }
-.home .statistic-number {
+.home .statistic-plus {
   font-size: 26px;
 }
 @media screen and (min-width: 320px) {
-  .home .statistic-number {
+  .home .statistic-plus {
     font-size: calc(26px + 54 * (100vw - 320px) / 1600);
   }
 }
 @media screen and (min-width: 1920px) {
-  .home .statistic-number {
+  .home .statistic-plus {
     font-size: 80px;
   }
 }
 .home .statistic-title {
+  display: block;
   font-weight: 800;
 }
 .home .statistic-title {
@@ -1238,10 +1239,10 @@ section {
 .home .brief-choice_infographics .infographics-item:nth-child(3n+1) {
   background-color: #FFF;
 }
-.home .brief-choice_infographics .infographics-item:nth-child(3n+1) .brief-choice_infographics__icon svg {
+.home .brief-choice_infographics .infographics-item:nth-child(3n+1) .infographics-icon svg {
   fill: #FF6500;
 }
-.home .brief-choice_infographics .infographics-item:nth-child(3n+1) .brief-choice_infographics__info b {
+.home .brief-choice_infographics .infographics-item:nth-child(3n+1) .infographics-info b {
   color: #FF6500;
 }
 .home .brief-choice_infographics .infographics-icon {
@@ -1833,11 +1834,12 @@ section {
     width: 50%;
   }
 }
-@media screen and (min-width: 1366px) {
+@media screen and (min-width: 1024px) {
   #coaches .coaches-list .list-container .container-item {
     width: 33.3333333333%;
   }
   #coaches .coaches-list_bio {
+    align-items: flex-end;
     max-width: 1024px;
   }
   #coaches .coaches-list_bio .bio-photo {
@@ -2240,6 +2242,11 @@ section {
   content: "+";
   color: #FF003E;
   display: inline-block;
+}
+#programmes .programmes-schedules .schedule-list .place .address {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 10px;
 }
 #programmes .programmes-schedules .schedule-list .date-time-range {
   -webkit-transition: all 0.35s ease-in-out;
