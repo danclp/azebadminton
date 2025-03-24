@@ -2227,7 +2227,7 @@ section {
   content: "-";
 }
 #programmes .programmes-schedules .schedule-list .place.open .date-time-range {
-  max-height: 15.5em;
+  max-height: 80em;
 }
 #programmes .programmes-schedules .schedule-list .place h4 {
   display: flex;
@@ -2258,17 +2258,22 @@ section {
 #programmes .programmes-schedules .schedule-list .date-time-range .group {
   color: rgb(127.5, 127.5, 127.5);
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   line-height: 1;
 }
+#programmes .programmes-schedules .schedule-list .date-time-range .group:not(:last-child) {
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.45);
+  margin-bottom: 20px;
+}
 #programmes .programmes-schedules .schedule-list .date-time-range .group p:nth-child(1) {
-  width: 20%;
+  width: 100%;
 }
 #programmes .programmes-schedules .schedule-list .date-time-range .group p:nth-child(2) {
-  width: 40%;
+  width: 50%;
 }
 #programmes .programmes-schedules .schedule-list .date-time-range .group p:nth-child(3) {
-  width: 40%;
+  width: 50%;
 }
 @media screen and (min-width: 1024px) {
   #programmes .programmes-schedules {
@@ -2276,6 +2281,15 @@ section {
   }
   #programmes .programmes-schedules .section-header {
     margin-bottom: 35px;
+  }
+  #programmes .programmes-schedules .schedule-list .date-time-range .group p:nth-child(1) {
+    width: 20%;
+  }
+  #programmes .programmes-schedules .schedule-list .date-time-range .group p:nth-child(2) {
+    width: 40%;
+  }
+  #programmes .programmes-schedules .schedule-list .date-time-range .group p:nth-child(3) {
+    width: 40%;
   }
 }
 #programmes .programmes-fee .brief {

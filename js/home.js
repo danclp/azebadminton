@@ -1,9 +1,3 @@
-// Mobile Nav .site-nav is the trigger
-$('.toggle').click(function() {
-  $(this).toggleClass('active');
-  $('.site-nav').toggleClass('active');
-});
-
 const progressCircle = document.querySelector(".autoplay-progress svg");
 const progressContent = document.querySelector(".autoplay-progress span");
 var swiper = new Swiper(".promote-swiper", {
