@@ -894,17 +894,63 @@ section {
 }
 .site-footer .social-title {
   font-size: 24px;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 .site-footer .social-list {
+  align-items: center;
   display: flex;
   margin: 0 -10px;
 }
 .site-footer .social-list li a {
+  color: transparent;
+  font: 0/0 a;
   padding: 0 10px;
+  text-shadow: none;
 }
-.site-footer .social-list li img {
-  width: 35px;
+.site-footer .social-list li a:before {
+  color: #FFF;
+  display: inline-block;
+  font-family: "Font Awesome 6 Brands";
+  font-size: 28px;
+  font-weight: 400;
+  text-rendering: auto;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+}
+.site-footer .social-list li a[href*="linkedin.com"]:before {
+  content: "\f0e1";
+}
+.site-footer .social-list li a[href*="facebook.com"]:before {
+  content: "\f09a";
+}
+.site-footer .social-list li a[href*="instagram.com"]:before {
+  content: "\f16d";
+}
+.site-footer .social-list li a[href*="tiktok.com"]:before {
+  content: "\e07b";
+}
+.site-footer .social-list li a[href*="x.com"]:before {
+  content: "\e61b";
+}
+.site-footer .social-list li a[href*="pinterest.com"]:before {
+  content: "\f0d2";
+}
+.site-footer .social-list li a[href*="youtube.com"]:before {
+  content: "\f167";
+}
+.site-footer .social-list li a[href*="vimeo.com"]:before {
+  background-color: #FFF;
+  color: #000;
+  content: "\f40a";
+}
+.site-footer .social-list li a[href*="xiaohongshu.com"]:before {
+  background-image: url("../images/xhs.svg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  content: "";
+  height: 30px;
+  width: 30px;
 }
 .site-footer .social-email {
   margin-top: 20px;
@@ -975,6 +1021,7 @@ section {
   bottom: 5%;
   right: 1%;
   width: 45px;
+  z-index: 100;
 }
 .whatsapp .wa_white {
   fill: #FFF;
@@ -1107,7 +1154,7 @@ section {
 }
 @media screen and (min-width: 1024px) {
   .home .hero-promote_content {
-    margin-top: 0;
+    margin-top: 60px;
     padding-top: 47.8125%;
   }
   .home .hero-promote_info {
@@ -1870,6 +1917,71 @@ section {
 #home .post-item, #activities .post-item {
   padding: 20px 10px;
   width: 50%;
+  position: relative;
+}
+#home .post-item.camps:before, #home .post-item.tournaments:before, #home .post-item.corporate-events:before, #activities .post-item.camps:before, #activities .post-item.tournaments:before, #activities .post-item.corporate-events:before {
+  border-radius: 0 0 3px 3px;
+  color: #FFF;
+  content: "";
+  display: inline-block;
+  filter: drop-shadow(2px 0 5px rgba(0, 0, 0, 0.65));
+  font-family: "Font Awesome 6 Brands";
+  font-size: 18px;
+  font-weight: 400;
+  height: 45px;
+  left: 20px;
+  position: absolute;
+  top: 20px;
+  width: 45px;
+  z-index: 1;
+}
+#home .post-item.camps .name, #home .post-item.tournaments .name, #home .post-item.corporate-events .name, #activities .post-item.camps .name, #activities .post-item.tournaments .name, #activities .post-item.corporate-events .name {
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+#home .post-item.camps .name small, #home .post-item.tournaments .name small, #home .post-item.corporate-events .name small, #activities .post-item.camps .name small, #activities .post-item.tournaments .name small, #activities .post-item.corporate-events .name small {
+  border-radius: 3px;
+  display: inline-block;
+  margin-right: 10px;
+  padding: 0 10px;
+}
+#home .post-item.camps:before, #activities .post-item.camps:before {
+  background-color: rgb(39, 114, 61.5);
+  background-image: url("../images/camps.png");
+  background-position: center center;
+  background-size: 35px;
+  background-repeat: no-repeat;
+}
+#home .post-item.camps .name small, #activities .post-item.camps .name small {
+  background-color: rgb(39, 114, 61.5);
+}
+#home .post-item.tournaments:before, #activities .post-item.tournaments:before {
+  background-color: rgb(204, 80.8, 0);
+  background-image: url("../images/tournaments.png");
+  background-position: center center;
+  background-size: 35px;
+  background-repeat: no-repeat;
+}
+#home .post-item.tournaments .name small, #activities .post-item.tournaments .name small {
+  background-color: rgb(204, 80.8, 0);
+  border-radius: 3px;
+  display: inline-block;
+  margin-right: 10px;
+  padding: 0 10px;
+}
+#home .post-item.corporate-events:before, #activities .post-item.corporate-events:before {
+  background-color: rgb(86.5096774194, 0, 253);
+  background-image: url("../images/corporate.png");
+  background-position: center center;
+  background-size: 35px;
+  background-repeat: no-repeat;
+}
+#home .post-item.corporate-events .name small, #activities .post-item.corporate-events .name small {
+  background-color: rgb(86.5096774194, 0, 253);
+  border-radius: 3px;
+  display: inline-block;
+  margin-right: 10px;
+  padding: 0 10px;
 }
 #home .post-img, #activities .post-img {
   border-radius: 5px;
@@ -1891,11 +2003,22 @@ section {
 #home .post-detail p, #activities .post-detail p {
   margin: 0;
 }
-#home .post-detail .name, #activities .post-detail .name {
-  font-weight: 700;
-}
 #home .post-detail .date, #home .post-detail .location, #activities .post-detail .date, #activities .post-detail .location {
   font-weight: 300;
+}
+#home .post-detail .date:before, #home .post-detail .location:before, #activities .post-detail .date:before, #activities .post-detail .location:before {
+  color: #999999;
+  content: "";
+  display: inline-block;
+  font-family: "Font Awesome 6 Free";
+  font-size: 14px;
+  margin-right: 10px;
+}
+#home .post-detail .date:before, #activities .post-detail .date:before {
+  content: "\f133";
+}
+#home .post-detail .location:before, #activities .post-detail .location:before {
+  content: "\f2b4";
 }
 #home .post-link, #activities .post-link {
   margin-top: 20px;
