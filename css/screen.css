@@ -1192,6 +1192,10 @@ section {
   padding: 20px;
   width: calc(33.3333333333% - 20px);
 }
+.home .statistic-item:nth-of-type(1) .statistic-plus:after {
+  content: "+";
+  display: inline-block;
+}
 .home .statistic-icon {
   flex: 1;
   margin-bottom: 20px;
@@ -1223,6 +1227,7 @@ section {
   display: block;
   font-weight: 800;
   line-height: 1.25;
+  position: relative;
 }
 .home .statistic-plus {
   font-size: 26px;
@@ -2248,6 +2253,13 @@ section {
   }
 }
 
+#programmes {
+  /* .section-header {
+  	color: site-color('primary');
+  	margin-top: 0;
+  	text-transform: capitalize;
+  } // .section-header */
+}
 #programmes #tabs {
   margin-top: 80px;
 }
@@ -2288,11 +2300,6 @@ section {
 }
 #programmes .tabs-list li a {
   padding: 0 10px;
-}
-#programmes .section-header {
-  color: #FF6500;
-  margin-top: 0;
-  text-transform: capitalize;
 }
 #programmes .programmes-wrap {
   display: flex;
